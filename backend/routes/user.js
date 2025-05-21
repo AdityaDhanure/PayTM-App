@@ -5,6 +5,14 @@ const jwt = require("jsonwebtoken");
 const JWT_SECRET = require("../config");
 const {authMiddleware} = require("../middleware");
 
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://your-frontend-on-vercel.vercel.app", // or "*" for all
+  methods: ["GET", "POST", "PUT", "DELETE"]
+}));
+
+
 const router = express.Router();
 
 function createToken(username){
