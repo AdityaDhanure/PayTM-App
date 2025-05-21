@@ -24,3 +24,5 @@ module.exports = {
     User,
     Account
 }
+
+// backend deploy link:    https://paytm-app-8h79.onrender.com
