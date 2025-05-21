@@ -7,5 +7,8 @@ export default defineConfig({
   base: '/',
   build: {
     outDir: 'dist'
+  },
+  server: {
+    historyApiFallback: true, // This helps locally
   }
 })
