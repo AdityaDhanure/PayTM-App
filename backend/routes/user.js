@@ -8,7 +8,7 @@ const {authMiddleware} = require("../middleware");
 const cors = require("cors");
 
 app.use(cors({
-  origin: "https://your-frontend-on-vercel.vercel.app", // or "*" for all
+  origin: "https://paytm-app-8h79.onrender.com", // or "*" for all
   methods: ["GET", "POST", "PUT", "DELETE"]
 }));
 
