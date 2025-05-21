@@ -24,7 +24,7 @@ export const Signup = ()=>{
             <InputBox label='Email' placeholder='abc@gmail.com' onChange={e=>setUserName(e.target.value)}/>
             <InputBox label='Password' placeholder='Password' onChange={e=>setPassword(e.target.value)}/>
             <Button label='Sign up' type='submit' onClick={async ()=>{
-                const response = await axios.post('http://localhost:4000/api/v1/user/signup', {
+                const response = await axios.post('https://paytm-app-8h79.onrender.com/api/v1/user/signup', {
                     firstname, lastname, username, password
                 });
                 localStorage.setItem('token', response.data.token);

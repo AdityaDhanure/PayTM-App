@@ -11,7 +11,7 @@ export const InitiateAmtButton = ({amount, name}) => {
     return <div className='flex justify-center '>
         <button className='bg-green-500 p-2 w-full rounded-md my-3 font-bold text-white hover:border-x-4 hover:border-x-white' onClick={async ()=>{
             try{
-                await axios.post('http://localhost:4000/api/v1/account/transfer', {
+                await axios.post('https://paytm-app-8h79.onrender.com/api/v1/account/transfer', {
                     to: id,
                     amount: parseInt(amount)
                 },{

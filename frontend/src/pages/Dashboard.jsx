@@ -8,7 +8,7 @@ export const Dashboard = ()=>{
     const [balance, setBalance] = useState(0);
     useEffect(() => {
         async function fetchBalance(){
-            await axios.get('http://localhost:4000/api/v1/account/balance', {
+            await axios.get('https://paytm-app-8h79.onrender.com/api/v1/account/balance', {
                 headers:{
                     Authorization: 'Bearer ' + localStorage.getItem('token')
                 }

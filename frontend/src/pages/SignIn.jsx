@@ -19,8 +19,8 @@ export const SignIn = ()=> {
             <SubHeading label='Enter your information to sign in'/>
             <InputBox label='Email' placeholder='abc@gmail.com' onChange={e=>setUsername(e.target.value)}/>
             <InputBox label='Password' placeholder='Password' onChange={e=>setPassword(e.target.value)}/>
-            <Button label='Sign in' type='submit' onClick={async () =>{
-                const response = await axios.post('http://localhost:4000/api/v1/user/signin', {username, password});
+            <Button label='Sign in' type='button' onClick={async () =>{
+                const response = await axios.post('https://paytm-app-8h79.onrender.com/api/v1/user/signin', {username, password});
                 localStorage.setItem('token', response.data.token);
                 navigate('/dashb');
             }}/>

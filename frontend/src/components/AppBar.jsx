@@ -7,7 +7,7 @@ export const AppBar = ()=> {
     const [name, setName] = useState("User");
     useEffect(() => {
         async function findUser() {
-            await axios.get('http://localhost:4000/api/v1/user/finduser', {
+            await axios.get('https://paytm-app-8h79.onrender.com/api/v1/user/finduser', {
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('token')
                 }

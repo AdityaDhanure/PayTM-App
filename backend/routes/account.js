@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 app.use(cors({
-  origin: "https://your-frontend-on-vercel.vercel.app", // or "*" for all
+  origin: "https://your-frontend-on-vercel.vercel.app/api/v1/user/signup", // or "*" for all
   methods: ["GET", "POST", "PUT", "DELETE"]
 }));
 

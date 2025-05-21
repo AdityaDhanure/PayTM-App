@@ -7,7 +7,7 @@ export const Users = ()=> {
     const [users, setUsers] = useState([]);
     const [filter, setFilter] = useState("");
     useEffect(()=>{
-        axios.get('http://localhost:4000/api/v1/user/bulk?filter='+ filter)
+        axios.get('https://paytm-app-8h79.onrender.com/api/v1/user/bulk?filter='+ filter)
             .then(res=>{
                 setUsers(res.data.users)
             })
@@ -16,7 +16,7 @@ export const Users = ()=> {
     const [id, setId] = useState("");
     useEffect(() => {
         async function findUser() {
-            await axios.get('http://localhost:4000/api/v1/user/finduser', {
+            await axios.get('https://paytm-app-8h79.onrender.com/api/v1/user/finduser', {
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('token')
                 }
