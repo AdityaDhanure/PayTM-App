@@ -4,10 +4,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-app.use(cors({
-    origin: 'https://pay-tm-app.vercel.app',  // frontend url
-    credentials: true  // to allow cookies to be sent from frontend to backend
-}));
+app.use(cors());
 app.use(bodyParser.json());  // body-parser
 
 const mainRouter = require('./routes/index.js');

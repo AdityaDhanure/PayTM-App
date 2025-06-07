@@ -3,10 +3,11 @@ const {authMiddleware} = require("../middleware");
 const {Account, User} = require("../db");
 const mongoose = require("mongoose");
 
+const app = express();
 const cors = require("cors");
 
 app.use(cors({
-  origin: "https://your-frontend-on-vercel.vercel.app/api/v1/user/signup", // or "*" for all
+  origin: "https://pay-tm-app.vercel.app/api/v1/user/signup", // or "*" for all
   methods: ["GET", "POST", "PUT", "DELETE"]
 }));
 
